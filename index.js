@@ -2,6 +2,7 @@ const BASE_URL = 'http://localhost:4000/films';
 
 // Fetch and display movie details
 async function fetchAndDisplayMovies() {
+    //try is used to catch an error
     try {
         const response = await fetch(BASE_URL, { method: "GET" });
         if (response.ok) {
@@ -9,8 +10,10 @@ async function fetchAndDisplayMovies() {
             displayMovieDetails(movies[0]);
             populateMovieList(movies);
         } else {
+            
             console.error('Failed to fetch movies:', response.statusText);
         }
+        //if an error is caught a message is displayed
     } catch (error) {
         console.error('Error fetching movies:', error);
     }
@@ -48,6 +51,7 @@ function populateMovieList(movies) {
 }
 
 // Handle ticket purchase
+//if all the tickets have been purchased it displays a sold out message
 function buyTicket(movie) {
     if (movie.tickets_sold < movie.capacity) {
         movie.tickets_sold++;
