@@ -16,8 +16,7 @@ HTML: Structure of the web application.
 CSS: Styling the web application.
 JavaScript: Functionality of the web application.
 Fetch API: Interacting with the backend to fetch movie data.
-Installation and Setup
-Ensure you have a JSON server running at http://localhost:4000/films.
+JSON server running at http://localhost:4000/films.
 
 
 View Movies:
@@ -36,9 +35,9 @@ File Structure
 
 index.html: Main HTML file for the web application.
 
-styles.css: CSS file for styling the web application.
+index.css: CSS file for styling the web application.
 
-script.js: JavaScript file containing the application logic.
+index.js: JavaScript file containing the application logic.
 
 JavaScript Code Overview
 fetchAndDisplayMovies: Fetches the movie data from the server and displays the details of the first movie in the list. Also populates the movie list.
